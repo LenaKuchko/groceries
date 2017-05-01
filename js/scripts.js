@@ -1,7 +1,10 @@
 $(function () {
   $("#form").submit(function (event) {
+    var name = $("#name").val();
     var ids = ["fruits", "vegies", "dairy", "bread"];
     var order = [];
+
+    $(".name").text(name);
 
     ids.forEach(function (id) {
 
@@ -11,7 +14,7 @@ $(function () {
       } else
         return;
     });
-    
+
     order.sort();
 
     var orderUp = [];
